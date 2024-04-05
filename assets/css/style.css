@@ -1014,6 +1014,51 @@ body {
   pointer-events: all;
 }
 
+.cart-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.item img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+.item-details h2 {
+  margin: 0;
+}
+
+.cart-actions {
+  margin-top: 20px;
+}
+
+#toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.toast {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.5s;
+}
+
+.toast.hide {
+  opacity: 0;
+}
+
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
