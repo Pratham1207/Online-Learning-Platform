@@ -113,36 +113,40 @@ document.addEventListener("DOMContentLoaded", function () {
  * cart page
  */
 
-// Example data for courses (you can replace this with your actual data)
-const courses = [
+const coursesInCart = [
   { title: "Course 1", description: "Description of course 1" },
   { title: "Course 2", description: "Description of course 2" },
   // Add more courses as needed
 ];
 
 // Function to dynamically add courses to the list
-function addCoursesToPage() {
+const addCoursesToPage = () => {
   const courseList = document.getElementById("courseList");
 
   // Clear existing content
   courseList.innerHTML = "";
 
   // Loop through courses and create list items
-  courses.forEach((course) => {
-    const li = document.createElement("li");
-    li.innerHTML = `
-            <div class="category-card" style="--color: 170, 75%, 41%">
-                
-                <h3 class="h3">
-                    <a href="#" class="card-title">${course.title}</a>
-                </h3>
-                <p class="card-text">${course.description}</p>
-                <span class="card-badge"></span>
-            </div>
-        `;
-    courseList.appendChild(li);
+  coursesInCart.forEach((course) => {
+    const div = document.createElement("div");
+    div.classList.add("category-card");
+    div.innerHTML = `
+      <div class="card-icon">
+          <img src="./assets/images/category-1.svg" width="40" height="40" loading="lazy" alt="${course.title}" class="img" />
+      </div>
+      <h3 class="h3">
+          <a href="#" class="card-title">${course.title}</a>
+      </h3>
+      <p class="card-text">${course.description}</p>
+      <span class="card-badge"></span>
+    `;
+    courseList.appendChild(div);
   });
-}
+
+  // Update total courses in cart
+  const cartTotal = document.getElementById("cartTotal");
+  cartTotal.textContent = `Total Courses in Cart: ${coursesInCart.length}`;
+};
 
 // Call the function to add courses when the page loads
 window.addEventListener("DOMContentLoaded", addCoursesToPage);
