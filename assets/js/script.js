@@ -60,22 +60,26 @@ addEventOnElem(window, "scroll", activeElem);
  * Add to cart courses button
  */
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   // Get all add to cart buttons
   const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
   // Get cart counter element
   const cartCounter = document.querySelector(".btn-badge");
 
-  // Initialize cart counter
-  let cartCount = 0;
+  // Initialize cart count from localStorage or default to 0
+  let cartCount = parseInt(localStorage.getItem("cartCount")) || 0;
+  // Update cart counter text
+  cartCounter.textContent = cartCount;
 
   // Function to add course to cart
-  function addToCart() {
+  const addToCart = () => {
     // Increment cart count
     cartCount++;
     // Update cart counter text
     cartCounter.textContent = cartCount;
-  }
+    // Store cart count in localStorage
+    localStorage.setItem("cartCount", cartCount);
+  };
 
   // Function to show toast message
   const showToast = (message) => {
@@ -108,45 +112,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-/**
- * cart page
- */
-
-const coursesInCart = [
-  { title: "Course 1", description: "Description of course 1" },
-  { title: "Course 2", description: "Description of course 2" },
-  // Add more courses as needed
-];
-
-// Function to dynamically add courses to the list
-const addCoursesToPage = () => {
-  const courseList = document.getElementById("courseList");
-
-  // Clear existing content
-  courseList.innerHTML = "";
-
-  // Loop through courses and create list items
-  coursesInCart.forEach((course) => {
-    const div = document.createElement("div");
-    div.classList.add("category-card");
-    div.innerHTML = `
-      <div class="card-icon">
-          <img src="./assets/images/category-1.svg" width="40" height="40" loading="lazy" alt="${course.title}" class="img" />
-      </div>
-      <h3 class="h3">
-          <a href="#" class="card-title">${course.title}</a>
-      </h3>
-      <p class="card-text">${course.description}</p>
-      <span class="card-badge"></span>
-    `;
-    courseList.appendChild(div);
-  });
-
-  // Update total courses in cart
-  const cartTotal = document.getElementById("cartTotal");
-  cartTotal.textContent = `Total Courses in Cart: ${coursesInCart.length}`;
-};
-
-// Call the function to add courses when the page loads
-window.addEventListener("DOMContentLoaded", addCoursesToPage);
