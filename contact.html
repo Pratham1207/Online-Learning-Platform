@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 
+    - primary meta tag
+  -->
+    <title>LearnHub - Learning Platform</title>
+    <meta name="title" content="LearnHub - Learning Platform" />
+    <meta name="description" content="Online-Learning-Platform" />
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet" />
+
+    <!-- 
+    - preload images
+  -->
+    <link rel="preload" as="image" href="./assets/images/hero-bg.svg" />
+    <link rel="preload" as="image" href="./assets/images/hero-banner-1.jpg" />
+    <link rel="preload" as="image" href="./assets/images/hero-banner-2.jpg" />
+    <link rel="preload" as="image" href="./assets/images/hero-shape-1.svg" />
+    <link rel="preload" as="image" href="./assets/images/hero-shape-2.png" />
+</head>
+
+<body id="top">
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+        <div class="container">
+            <a href="#" class="logo">
+                <h1>LearnHub</h1>
+            </a>
+            <nav class="navbar" data-navbar>
+                <div class="wrapper"></div>
+
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="about.html" class="navbar-link" data-nav-link>About</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="courses.html" class="navbar-link" data-nav-link>Courses</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="team.html" class="navbar-link" data-nav-link>Our Team</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="contact.html" class="navbar-link" data-nav-link>Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="header-action-btn" aria-label="toggle search" title="Search">
+                    <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+                </button>
+
+                <a href="#" class="header-action-btn"><button aria-label="cart" title="Cart">
+                        <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+
+                        <span class="btn-badge">0</span>
+                    </button>
+                </a>
+
+                <a href="#" class="btn has-before">
+                    <span class="span">Login/Sign Up</span>
+
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </a>
+
+                <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
+                    <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+                </button>
+            </div>
+
+            <div class="overlay" data-nav-toggler data-overlay></div>
+        </div>
+    </header>
+
+    <main>
+        <div class="contact-container">
+            <span class="big-circle"></span>
+            <img src="assets/images/shape.png" class="square" alt="" />
+            <div class="form">
+              <div class="contact-info">
+                <h3 class="title">Let's get in touch</h3>
+                <p class="contact-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                  dolorum adipisci recusandae praesentium dicta!
+                </p>
+      
+                <div class="info">
+                  <div class="information">
+                    <img src="assets/images/location.png" class="icon" alt="" />
+                    <p>92 Cherry Drive Uniondale, NY 11553</p>
+                  </div>
+                  <div class="information">
+                    <img src="assets/images/email.png" class="icon" alt="" />
+                    <p>lorem@ipsum.com</p>
+                  </div>
+                  <div class="information">
+                    <img src="assets/images/phone.png" class="icon" alt="" />
+                    <p>123-456-789</p>
+                  </div>
+                </div>
+      
+                <div class="social-media">
+                  <p>Connect with us :</p>
+                  <div class="social-icons">
+                    <a href="#">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="contact-form">
+                <span class="circle one"></span>
+                <span class="circle two"></span>  
+                <form action="index.html" autocomplete="off">
+                  <h3 class="title">Contact us</h3>
+                  <div class="input-container">
+                    <input type="text" name="name" class="input-fields" required>
+                    <label for="name">Name</label>
+                    <span class="labels">Name</span>
+                  </div>
+                  <div class="input-container">
+                    <input type="email" name="email" class="input-fields" required>
+                    <label for="email">Email</label>
+                    <span class="labels">Email</span>
+                  </div>
+                  <div class="input-container">
+                    <input type="tel" name="phone" class="input-fields" required>
+                    <label for="phone">Phone</label>
+                    <span class="labels">Phone</span>
+                  </div>
+                  <div class="input-container dropdown">
+                    <label for="course">Course</label>
+                    <span class="labels">Course</span>
+                    <select name="course" class="input-fields dropdown-menu" required>
+                      <option value="" disabled selected></option>
+                      <option value="web_design">Web Design</option>
+                      <option value="graphic_design">Graphic Design</option>
+                      <option value="programming">Programming</option>
+                      <option value="digital_marketing">Digital Marketing</option>
+                    </select>
+                  </div>                  
+                  <div class="input-container textarea">
+                    <textarea name="message" class="input-fields" required></textarea>
+                    <label for="message">Message</label>
+                    <span class="labels">Message</span>
+                  </div>
+                  <button type="submit" class="contact-submit">Send</button>
+                </form>
+              </div>
+            </div>
+        </div>
+
+        <div class="faq-container">
+            <img src="assets/images/shape.png" class="faq-square" alt="" />
+            <h1 class="faq-heading">Frequently Asked Questions</h1>
+            <div class="faq-cards">
+                <span class="big-square"></span>
+                <div class="faq-card">
+                    <div class="toggle-btn question">Are you accredited or licensed by educational organizations?</div>
+                    <div class="answer">There isn’t always a need for licensing or accreditation for online courses. However, some programs do require it. Either way, people will usually ask what type of training or background you have, as well as any licensing that’s available if that’s relevant. Make sure that you answer this question by telling them if you do hold any licenses or accreditation, as well as by explaining whether or not those are needed, and why. It gives them the confidence that you have the right experience and boosts your credibility because you’re offering additional information for the sake of education alone. </div>
+                </div>
+        
+                <div class="faq-card">
+                    <div class="toggle-btn question">Does online learning really work?</div>
+                    <div class="answer">There are always going to be sceptics, and there are frequently multiple of them when it comes to online learning. Everyone wants to know if taking classes online "really works," but there are a lot of elements to take into account, making it difficult to answer. In general, internet education can be successful. That is contingent upon a number of factors, including the appropriate arrangement of the courses, the expertise and education of the provider, and the student's performance in an online learning environment. People need to know what they're getting into, and you should be able to convey these things to them. After that, you might ask them to get in touch with you to talk about whether it would be suitable for them. </div>
+                </div>
+        
+                <div class="faq-card">
+                    <div class="toggle-btn question">What is online learning like?</div>
+                    <div class="answer">The most common query from those who have never used online learning is what it's really like. You are aware that there are various forms of online learning, thus there is a warning. Thus, this is your opportunity to clarify it to others. Make it clear to them that there are several kinds of online programmes and courses, and they must choose the one that best suits their needs. After that, give them all the information they require by outlining the kinds of courses you provide and the operation of your online programmes. In addition to providing them with facts, this builds their trust because you're being open and honest with them. 
+                    </div>
+                </div>
+        
+                <div class="faq-card">
+                    <div class="toggle-btn question">Can I learn at my own pace?</div>
+                    <div class="answer">This is yet another typical query regarding online education. Self-paced programmes are frequently offered in addition to conventional classroom or meeting-style programmes. Because there are so many busy people in the world today who desire to improve themselves, self-paced programmes are very popular. Regardless of whether you offer this choice, make sure you respond to this query and outline the advantages and disadvantages of each method of instruction. As an added benefit, you can ask them to get in touch with you to find out more details or to talk through their alternatives. 
+                    </div>
+                </div>
+    
+                <div class="faq-card">
+                    <div class="toggle-btn question">What types of assignments do you give?</div>
+                    <div class="answer">People frequently want to know what kind of work they'll be doing when they take online classes, much like they want to know the style of online learning. Make sure to include a brief overview of your qualifications here, and if you can, include links to earlier tasks or projects. Links to programme or course pages are also possible. People can make better decisions about their educational needs if you tell them about the coursework expectations and the way the courses are taught. 
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <div class="toggle-btn question">What are the requirements to take the courses or sign up with your website?</div>
+                    <div class="answer">People will be curious about how to begin. Although you can direct them to the sections of your website that assist them in that process, you should also take the time to explain it to them directly. List any enrollment windows you may have, for example. If there are any requirements for deposits or payment, please clarify. Regardless of the nature of the courses you offer online, make sure customers are aware of all the requirements. 
+                    </div>
+                </div>
+    
+                <div class="faq-card">
+                    <div class="toggle-btn question"> What are the technology requirements?</div>
+                    <div class="answer">In a same spirit, consumers must ascertain the state of their computers. You should describe all of the software you utilise as well as the sort of equipment required for participants in your online courses. Include any programmes or apps that are utilised in this section. Here, too, you should provide technology if you have it or point them in the direction of the right buy. Assure them that you are available to assist with the needs and that they may get in touch with you to talk about whether their system can support the requirements of your online courses. </div>
+                </div>
+        
+                <div class="faq-card">
+                    <div class="toggle-btn question">How long does each course take?</div>
+                    <div class="answer">While some online courses span several months, others are only a few hours long. Your courses could have different durations based on the kind of online education you provide. Tell folks about the many kinds of courses you provide and the duration of each one. This is another opportunity to remind customers that you provide self-paced learning and reassure them that you can assist them in studying at their own speed. </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+        <div class="footer-top section">
+            <div class="container grid-list">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <h1>LearnHub</h1>
+                    </a>
+
+                    <p class="footer-brand-text">
+                        Lorem ipsum dolor amet consecto adi pisicing elit sed eiusm tempor
+                        incidid unt labore dolore.
+                    </p>
+
+                    <div class="wrapper">
+                        <span class="span">Add:</span>
+
+                        <address class="address">123 Vitoria St, Canada</address>
+                    </div>
+
+                    <div class="wrapper">
+                        <span class="span">Call:</span>
+
+                        <a href="tel:+011234567890" class="footer-link">+01 123 4567 890</a>
+                    </div>
+
+                    <div class="wrapper">
+                        <span class="span">Email:</span>
+
+                        <a href=" mailto:info@learnhub.com" class="footer-link">info@learnhub.com</a>
+                    </div>
+                </div>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="footer-list-title">Online Platform</p>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">About</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">Courses</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">Instructor</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">Events</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">Instructor Profile</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">Purchase Guide</a>
+                    </li>
+                </ul>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="footer-list-title">Links</p>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">Contact Us</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">Gallery</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">News & Articles</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">FAQ's</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">Sign In/Registration</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">Coming Soon</a>
+                    </li>
+                </ul>
+
+                <div class="footer-list">
+                    <p class="footer-list-title">Contacts</p>
+
+                    <p class="footer-list-text">
+                        Enter your email address to register to our newsletter
+                        subscription
+                    </p>
+
+                    <form action="" class="newsletter-form">
+                        <input type="email" name="email_address" placeholder="Your email" required
+                            class="input-field" />
+
+                        <button type="submit" class="btn has-before">
+                            <span class="span">Subscribe</span>
+
+                            <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                        </button>
+                    </form>
+
+                    <ul class="social-list">
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-linkedin"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-instagram"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-youtube"></ion-icon>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">
+                    Copyright 2024 All Rights Reserved by
+                    <a href="#" class="copyright-link">Group - 5 - LearnHub - Learning Platform</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 
+    - #BACK TO TOP
+  -->
+
+    <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
+        <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+    </a>
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/script.js" defer></script>
+
+    <!-- 
+    - ionicon link
+  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

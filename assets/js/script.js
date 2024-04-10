@@ -112,3 +112,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+/**
+ * CONTACT
+ */
+const inputs = document.querySelectorAll(".input-fields");
+
+function focusFunc() {
+  let parent = this.parentNode;
+  parent.classList.add("focus");
+}
+
+function blurFunc() {
+  let parent = this.parentNode;
+  if (this.value == "") {
+    parent.classList.remove("focus");
+  }
+}
+
+inputs.forEach((input) => {
+  input.addEventListener("focus", focusFunc);
+  input.addEventListener("blur", blurFunc);
+});
+
+$(document).ready(function() {
+  $('.toggle-btn').click(function() {
+      var $answer = $(this).next('.answer');
+      if ($(this).hasClass('open')) {
+          $answer.slideUp();
+          $(this).removeClass('open');
+      } else {
+          $('.toggle-btn.open').next('.answer').slideUp();
+          $('.toggle-btn.open').removeClass('open');
+
+          $answer.slideDown();
+          $(this).addClass('open');
+      }
+  });
+});
