@@ -6,21 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- 
-    - primary meta tag
-  -->
+    <!-- primary meta tag  -->
     <title>Our Team - LearnHub - Learning Platform</title>
     <meta name="title" content="LearnHub - Learning Platform" />
     <meta name="description" content="Online-Learning-Platform" />
 
-    <!-- 
-    - custom css link
-  -->
+    <!-- custom css link  -->
     <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <!-- 
-    - google font link
-  -->
+    <!-- google font link  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -28,10 +22,8 @@
         rel="stylesheet" />
 
 <body id="top">
-    <!-- 
-    - #HEADER
-  -->
 
+    <!-- header section -->
     <header class="header" data-header>
         <div class="container">
             <a href="#" class="logo">
@@ -92,6 +84,7 @@
 
     <main>
         <article>
+            <!-- team section -->
             <section class="section course" id="courses" aria-label="course">
                 <div class="container">
                     <h2 class="h2 section-title">Meet Our Team</h2>
@@ -151,6 +144,7 @@
                                 </div>
                             </div>
                         </li>
+
                         <li>
                             <div class="course-card">
                                 <figure class="card-banner img-holder" style="--width: 370; --height: 220">
@@ -171,10 +165,7 @@
         </article>
     </main>
 
-    <!-- 
-                    - #FOOTER
-                  -->
-
+    <!-- footer -->
     <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
         <div class="footer-top section">
             <div class="container grid-list">
@@ -331,10 +322,7 @@
         </div>
     </footer>
 
-    <!-- 
-                    - #BACK TO TOP
-                  -->
-
+    <!-- back to top -->
     <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
         <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
     </a>
@@ -354,10 +342,13 @@
             }
             document.getElementById("logoutBtn").addEventListener("click", () => {
                 sessionStorage.clear();
+                localStorage.clear();
                 window.location.href = "login.html";
             });
         });
     </script>
+
+    <!-- library js -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

@@ -6,30 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- 
-    - primary meta tag
-  -->
+    <!-- primary meta tag -->
     <title>LearnHub - Learning Platform</title>
     <meta name="title" content="LearnHub - Learning Platform" />
     <meta name="description" content="Online-Learning-Platform" />
 
-    <!-- 
-    - custom css link
-  -->
+    <!-- custom css link -->
     <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <!-- 
-    - google font link
-  -->
+    <!-- google font links -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
         rel="stylesheet" />
 
-    <!-- 
-    - preload images
-  -->
+    <!-- preload images -->
     <link rel="preload" as="image" href="./assets/images/hero-bg.svg" />
     <link rel="preload" as="image" href="./assets/images/hero-banner-1.jpg" />
     <link rel="preload" as="image" href="./assets/images/hero-banner-2.jpg" />
@@ -38,10 +30,7 @@
 </head>
 
 <body id="top">
-    <!-- 
-    - #HEADER
-  -->
-
+    <!-- header section -->
     <header class="header" data-header>
         <div class="container">
             <a href="#" class="logo">
@@ -89,7 +78,9 @@
                     <ion-icon name="person-circle-outline" aria-hidden="true"></ion-icon>
                     <span class="span" id="usernameDisplay"></span>
                 </a>
-                <button class="btn has-before"><span class="span" id="logoutBtn">Logout</span></button>
+                <button class="btn has-before">
+                    <span class="span" id="logoutBtn">Logout</span>
+                </button>
 
                 <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
                     <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
@@ -102,10 +93,7 @@
 
     <main>
         <article>
-            <!-- 
-        - #HERO
-      -->
-
+            <!-- home section -->
             <section class="section hero has-bg-image" id="home" aria-label="home"
                 style="background-image: url('./assets/images/hero-bg.svg')">
                 <div class="container">
@@ -147,10 +135,7 @@
                 </div>
             </section>
 
-            <!-- 
-        - #CATEGORY
-      -->
-
+            <!-- category section -->
             <section class="section category" aria-label="category">
                 <div class="container">
                     <p class="section-subtitle">Categories</p>
@@ -243,10 +228,7 @@
                 </div>
             </section>
 
-            <!-- 
-        - #COURSE
-      -->
-
+            <!-- course section -->
             <section class="section course" id="courses" aria-label="course">
                 <div class="container">
                     <p class="section-subtitle">Popular Courses</p>
@@ -421,10 +403,7 @@
                 </div>
             </section>
 
-            <!-- 
-        - #VIDEO
-      -->
-
+            <!-- Video Section -->
             <section class="video has-bg-image" aria-label="video"
                 style="background-image: url('./assets/images/video-bg.png')">
                 <div class="container">
@@ -438,19 +417,16 @@
                             </button>
                         </div>
 
-                        <img src="./assets/images/video-shape-1.png" width="1089" height="605" loading="lazy" alt=""
+                        <img src="assets/images/video-shape-1.png" width="1089" height="605" loading="lazy" alt=""
                             class="shape video-shape-1" />
 
-                        <img src="./assets/images/video-shape-2.png" width="158" height="174" loading="lazy" alt=""
+                        <img src="assets/images/video-shape-2.png" width="158" height="174" loading="lazy" alt=""
                             class="shape video-shape-2" />
                     </div>
                 </div>
             </section>
 
-            <!-- 
-        - #STATE
-      -->
-
+            <!-- Stats Section -->
             <section class="section stats" aria-label="stats">
                 <div class="container">
                     <ul class="grid-list">
@@ -489,10 +465,7 @@
                 </div>
             </section>
 
-            <!-- 
-        - #BLOG
-      -->
-
+            <!-- blog section -->
             <section class="section blog has-bg-image" id="blog" aria-label="blog"
                 style="background-image: url('./assets/images/blog-bg.svg')">
                 <div class="container">
@@ -626,10 +599,7 @@
         </article>
     </main>
 
-    <!-- 
-    - #FOOTER
-  -->
-
+    <!-- footer -->
     <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
         <div class="footer-top section">
             <div class="container grid-list">
@@ -779,17 +749,15 @@
         <div class="footer-bottom">
             <div class="container">
                 <p class="copyright">
-                    Copyright 2024 All Rights Reserved by
-                    <a href="#" class="copyright-link">Group - 5 - LearnHub - Learning Platform</a>
+                    &copy; 2024 All Rights Reserved by
+                    <a href="https://github.com/Pratham1207/Online-Learning-Platform" class="copyright-link">Group - 5 -
+                        LearnHub - Learning Platform</a>
                 </p>
             </div>
         </div>
     </footer>
 
-    <!-- 
-    - #BACK TO TOP
-  -->
-
+    <!-- back to top -->
     <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
         <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
     </a>
@@ -809,15 +777,17 @@
             }
             document.getElementById("logoutBtn").addEventListener("click", () => {
                 sessionStorage.clear();
+                localStorage.clear();
                 window.location.href = "login.html";
             });
         });
     </script>
+    <!-- library js -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="./assets/js/script.js" defer></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
