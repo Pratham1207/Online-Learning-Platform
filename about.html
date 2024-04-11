@@ -47,7 +47,7 @@
                     </li>
 
                     <li class="navbar-item">
-                        <a href="about.html" class="navbar-link" data-nav-link>About</a>
+                        <a href="about.html" class="navbar-link" id="active" data-nav-link>About</a>
                     </li>
 
                     <li class="navbar-item">
@@ -77,10 +77,10 @@
                 </a>
 
                 <a href="#" class="btn has-before">
-                    <span class="span">Login/Sign Up</span>
-
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    <ion-icon name="person-circle-outline" aria-hidden="true"></ion-icon>
+                    <span class="span" id="usernameDisplay"></span>
                 </a>
+                <button class="btn has-before"><span class="span" id="logoutBtn">Logout</span></button>
 
                 <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
                     <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
@@ -340,14 +340,28 @@
         <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
     </a>
 
-    <!-- 
-                - custom js link
-              -->
-    <script src="./assets/js/script.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Retrieve username from session storage
+            const loggedInUsername = sessionStorage.getItem("username");
 
-    <!-- 
-                - ionicon link
-              -->
+            // Display username on the page
+            if (!loggedInUsername) {
+                window.location.href = "login.html";
+                return; // Stop further execution
+            } else {
+                document.getElementById("usernameDisplay").textContent =
+                    loggedInUsername;
+            }
+            document.getElementById("logoutBtn").addEventListener("click", () => {
+                sessionStorage.clear();
+                window.location.href = "login.html";
+            });
+        });
+    </script>
+    <script src="./assets/js/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
