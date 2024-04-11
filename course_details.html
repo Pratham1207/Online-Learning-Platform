@@ -27,6 +27,14 @@
         href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
         rel="stylesheet" />
 
+    <!-- 
+    - preload images
+  -->
+    <link rel="preload" as="image" href="./assets/images/hero-bg.svg" />
+    <link rel="preload" as="image" href="./assets/images/hero-banner-1.jpg" />
+    <link rel="preload" as="image" href="./assets/images/hero-banner-2.jpg" />
+    <link rel="preload" as="image" href="./assets/images/hero-shape-1.svg" />
+    <link rel="preload" as="image" href="./assets/images/hero-shape-2.png" />
 </head>
 
 <body id="top">
@@ -52,15 +60,15 @@
                     </li>
 
                     <li class="navbar-item">
-                        <a href="courses.html" class="navbar-link" data-nav-link>Courses</a>
+                        <a href="#courses" class="navbar-link" data-nav-link>Courses</a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="team.html" class="navbar-link" data-nav-link>Our Team</a>
+                        <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="contact.html" class="navbar-link" data-nav-link>Contact</a>
+                        <a href="#" class="navbar-link" data-nav-link>Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -70,15 +78,14 @@
                     <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
                 </button>
 
-                <a href="#" class="header-action-btn"><button aria-label="cart" title="Cart">
-                        <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+                <button class="header-action-btn" aria-label="cart" title="Cart">
+                    <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
 
-                        <span class="btn-badge">0</span>
-                    </button>
-                </a>
+                    <span class="btn-badge">0</span>
+                </button>
 
                 <a href="#" class="btn has-before">
-                    <span class="span">Login/Sign Up</span>
+                    <span class="span">Try for free</span>
 
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                 </a>
@@ -93,71 +100,208 @@
     </header>
 
     <main>
-        <article>
-            <section class="section blog has-bg-image" id="blog" aria-label="blog"
-                style="background-image: url('./assets/images/blog-bg.svg')">
-                <div class="container">
-                    <ul class="grid-list">
-                        <li>
-                            <div class="blog-card">
-                                <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370">
-                                    <img src="./assets/images/course-1.jpg" width="370" height="370" loading="lazy"
-                                        alt="Become A Better Blogger: Content Planning" class="img-cover" />
-                                </figure>
-
-                                <div class="card-content">
-                                    <a href="#" class="card-btn add-to-cart-btn" aria-label="Add to cart">
-                                        <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
-                                    </a>
-
-                                    <span class="badge">Beginner</span>
-
-                                    <h3 class="h3">
-                                        <a href="#" class="card-title">Build Responsive Real- World
-                                            Websites with HTML
-                                            and
-                                            CSS</a>
-                                    </h3>
-
-                                    <ul class="card-meta-list">
-                                        <li class="card-meta-item">
-                                            <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
-
-                                            <span class="span">20 Students</span>
-                                        </li>
-
-                                        <li class="card-meta-item">
-                                            <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
-
-                                            <span class="span">8 Lessons</span>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </li>
-                    </ul><br>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis cumque
-                        reiciendis expedita
-                        officiis ab officia ipsum corrupti, animi repellendus mollitia adipisci incidunt
-                        deleniti. Amet quaerat hic, magnam voluptatum neque minus consequatur. Aliquam aut modi
-                        eos quibusdam. Dolores adipisci nulla praesentium eum perspiciatis deleniti repellat
-                        quidem soluta pariatur nihil, reprehenderit laudantium natus, sequi distinctio modi
-                        voluptatum voluptatem. Nihil quis veniam facere numquam nisi, et autem voluptate
-                        asperiores assumenda mollitia officiis possimus quam. Natus quae facere porro tempora
-                        eum enim deserunt molestias dicta, maxime consequatur quas reprehenderit sint rerum
-                        eligendi labore modi, similique explicabo quaerat. Esse voluptas, perferendis pariatur
-                        asperiores facere itaque illum quisquam doloremque similique eaque deserunt ullam
-                        cupiditate tenetur deleniti provident aspernatur totam atque vitae nihil? Magnam
-                        voluptatum reiciendis, consequuntur cumque deserunt ut? Quis, minima voluptas. Quae
-                        voluptatum dolore reprehenderit voluptas quam voluptates molestias debitis quo sapiente
-                        exercitationem, libero dolorem velit doloribus hic accusamus eius fugit! Non ad fugiat
-                        voluptate!</p>
-                    <img src="./assets/images/blog-shape.png" width="186" height="186" loading="lazy" alt=""
-                        class="shape blog-shape" />
+        <div class="course-details">
+            <section class="course-header">
+                <div class="background-image"></div>
+                <div class="course-info">
+                    <h1>Build Responsive Real-World Websites with HTML and CSS</h1>
+                    <div class="select-wrapper">
+                        <label for="start-date">Start Date</label><br>
+                        <select id="start-date">
+                            <option value="May 2024">May 2024</option>
+                            <option value="September 2024">September 2024</option>
+                        </select>
+                        <span class="select-arrow"></span>
+                    </div>                   
                 </div>
             </section>
-        </article>
+        
+            <!-- Tabs for Course Details -->
+            <div class="course-tabs">
+                <button class="tab-btn active" data-tab="description">Course Description</button>
+                <button class="tab-btn" data-tab="admissions">Admissions</button>
+                <button class="tab-btn" data-tab="content">Course Content</button>
+                <button class="tab-btn" data-tab="careers">Careers</button>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        
+            <!-- Tab Content Sections -->
+    
+            <div class="tab-content" id="description">
+                <div class="course-description">
+                    <h2>Course Description</h2>
+                    <p>This course is designed for beginners to learn how to build responsive and interactive websites using HTML and CSS. You will acquire fundamental skills in web development and design.</p>
+                </div> 
+    
+                <div class="details-container">
+                    <div class="course-details">
+                        <h3>Course Details</h3>
+                        <ul>
+                            <li><strong>Code:</strong> 007</li>
+                            <li><strong>Length:</strong> 6 Months</li>
+                            <li><strong>Start:</strong> May 2024</li>
+                            <li><strong>Credential:</strong> Ontario College Graduate Certificate</li>
+                        </ul>
+                    </div>
+    
+                    <div class="course-contacts">
+                        <h3>Course Contacts</h3>
+                        <p>Laura Weiler - <a href="mailto:admissions@learnhub.on.ca">admissions@learnhub.on.ca</a></p>
+                        <p>Academic School: Applied Computer Science & IT</p>
+                    </div>
+                </div>
+                
+            </div>
+        
+            <div class="tab-content" id="admissions">
+                <div class="content-wrapper">
+                    <div class="admission-content">
+                        <h2 class="admission-date">Admissions - May 2024</h2>
+                        <div class="admission-requirements">
+                            <h3>Admission Requirements</h3>
+                            <p>No prerequisites are required for this beginner-level course.</p>
+                        </div>
+    
+                        <div class="course-requirements">
+                            <h3>Course Requirements</h3>
+                            <p>All you need is enthusiasm and a computer with internet access!</p>
+                        </div> 
+                    </div>
+    
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <h4>Canadian Admissions Contact</h4>
+                            <p><a href="mailto:admissions@learnhub.on.ca">admissions@learnhub.on.ca</a></p>
+                        </div>
+                        <div class="contact-card">
+                            <h4>International Admissions Contact</h4>
+                            <p><a href="mailto:internationaladmissions@learnhub.on.ca">internationaladmissions@learnhub.on.ca</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="tab-content" id="content">
+                <h2>Course Content</h2>
+                <div class="weekly-content">
+                    <div class="week">
+                        <h3>Week 1: Introduction to HTML and CSS</h3>
+                        <p>Welcome to the course! In this first week, you'll learn the basics of HTML and CSS for building responsive websites.</p>
+                        <button class="toggle-details">Show Details</button>
+                        <div class="details hidden">
+                            <p>Topics:</p>
+                            <ul>
+                                <li>HTML fundamentals</li>
+                                <li>CSS styling techniques</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="week">
+                        <h3>Week 2: Responsive Design and Layouts</h3>
+                        <p>Discover how to create responsive layouts and design principles for various screen sizes.</p>
+                        <button class="toggle-details">Show Details</button>
+                        <div class="details hidden">
+                            <p>Topics:</p>
+                            <ul>
+                                <li>CSS media queries</li>
+                                <li>Flexbox and Grid</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="tab-content" id="careers">
+                <div class="career-section">
+                    <h2>Overview of Career Paths</h2>
+                    <p>Explore various career options available after completing this course.</p>
+                    <div class="career-options">
+                        <div class="career-option">
+                        <img src="/assets/images/job1.jpg" alt="Career Option 1">
+                        <p>Computer Programmer</p>
+                        </div>
+                        <div class="career-option">
+                        <img src="/assets/images/job2.jpg" alt="Career Option 2">
+                        <p>Network administrator</p>
+                        </div>
+                        <div class="career-option">
+                            <img src="/assets/images/job3.jpg" alt="Career Option 3">
+                            <p>Web developer</p>
+                        </div>
+                        <div class="career-option">
+                            <img src="/assets/images/job4.jpg" alt="Career Option 4">
+                            <p>Systems analyst</p>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="career-section">
+                    <h2>Skills Acquired</h2>
+                    <p>By the end of this course, you will have acquired the following skills:</p>
+                    <ul class="skills-list">
+                        <li>HTML and CSS proficiency</li>
+                        <li>Responsive web design techniques</li>
+                        <li>Basic understanding of front-end development</li>
+                    </ul>
+                </div>
+              
+                <div class="career-section">
+                    <h2>Industry Insights</h2>
+                    <p>Discover the industries where these skills are in demand.</p>
+                    <div class="industry-carousel">
+                        <div class="industry-slide">
+                            <img src="/assets/images/industry1.jpg" alt="Industry 1">
+                            <p>Industry Information 1</p>
+                        </div>
+                        <div class="industry-slide">
+                            <img src="/assets/images/industry2.jpg" alt="Industry 2">
+                            <p>Industry Information 2</p>
+                        </div>
+                        <div class="industry-slide">
+                            <img src="/assets/images/industry3.jpg" alt="Industry 3">
+                            <p>Industry Information 3</p>
+                        </div>
+                        <div class="industry-slide">
+                            <img src="/assets/images/industry4.jpg" alt="Industry 4">
+                            <p>Industry Information 4</p>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="career-section">
+                    <h2>Success Stories</h2>
+                    <p>Hear from individuals who have succeeded after taking this course.</p>
+                    <div class="testimonial-carousel">
+                        <div class="testimonial-slide">
+                            <p>"This course was a game-changer for me! I learned so much about web development and landed a job shortly after completing it."</p>
+                            <p>- John Smith</p>
+                        </div>
+                        <div class="testimonial-slide">
+                            <p>"I can't believe how much I've grown professionally. Thanks to this course, I now work as a front-end developer at a reputable company."</p>
+                            <p>- Jane Smith</p>
+                        </div>
+                        <div class="testimonial-slide">
+                            <p>"Highly recommended! The instructors were fantastic, and the hands-on projects were invaluable for building my portfolio."</p>
+                            <p>- Alex Johnson</p>
+                        </div>
+                        <div class="testimonial-slide">
+                            <p>"I was a complete beginner, but now I feel confident in my HTML and CSS skills. Thank you for this amazing learning experience!"</p>
+                            <p>- Emily Brown</p>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="career-section">
+                    <h2>Career Resources</h2>
+                    <p>Explore additional resources to help you kickstart your career.</p>
+                    <ul class="resource-list">
+                        <li><a href="#">Job Boards</a></li>
+                        <li><a href="#">Networking Events</a></li>
+                        <li><a href="#">Professional Organizations</a></li>
+                    </ul>
+                </div>              
+            </div> 
+        </div>        
     </main>
 
     <!-- 
@@ -314,7 +458,7 @@
             <div class="container">
                 <p class="copyright">
                     Copyright 2024 All Rights Reserved by
-                    <a href="#" class="copyright-link">Group - 5 - LearnHub - Learning Platform</a>
+                    <a href="#" class="copyright-link">Group - 5</a>
                 </p>
             </div>
         </div>
@@ -336,6 +480,8 @@
     <!-- 
     - ionicon link
   -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

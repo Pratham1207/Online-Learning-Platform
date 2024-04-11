@@ -141,3 +141,79 @@ $(document).ready(function() {
   });
 
 });
+
+
+$(document).ready(function() {
+  $('#description').show();
+
+  $('.tab-btn').click(function() {
+      $('.tab-content').hide();
+      $('.tab-btn').removeClass('active');
+      var tabId = $(this).data('tab');
+      $('#' + tabId).show();
+      $(this).addClass('active');
+  });
+
+  $('.add-to-cart').click(function() {
+      alert('Course added to cart!');
+  });
+
+  //
+  $('#start-date').change(function() {
+    var selectedOption = $(this).val();
+    $('.admission-date').text('Admissions - ' + selectedOption);
+  });
+  
+  $('.toggle-details').click(function() {
+    var button = $(this);
+    var details = button.next('.details');
+    var otherDetails = $('.details').not(details);
+
+    if (details.is(':visible')) {
+        details.removeClass('bounceIn').addClass('bounceOut');
+        setTimeout(function() {
+            details.hide().removeClass('bounceOut');
+            button.text('Show Details');
+        }, 100);
+    } else {
+        otherDetails.removeClass('bounceIn').addClass('bounceOut');
+        setTimeout(function() {
+            otherDetails.hide().removeClass('bounceOut');
+            details.show().addClass('bounceIn');
+            $('.toggle-details').not(button).text('Show Details');
+            button.text('Hide Details');
+        }, 100);
+    }
+  });
+
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  function initCarousel(carouselSelector) {
+    const carousel = document.querySelector(carouselSelector);
+    const slides = carousel.querySelectorAll(".industry-slide, .testimonial-slide");
+
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      slides.forEach((slide) => {
+        slide.style.display = "none";
+      });
+      slides[index].style.display = "block";
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    }
+
+    showSlide(currentIndex);
+
+    setInterval(nextSlide, 5000);
+  }
+
+  initCarousel(".industry-carousel");
+  initCarousel(".testimonial-carousel");
+});
+
