@@ -113,8 +113,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-
 /* Contact Form */
 const inputs = document.querySelectorAll(".input-fields");
 
@@ -135,9 +133,10 @@ inputs.forEach((input) => {
   input.addEventListener("blur", blurFunc);
 });
 
-$(document).ready(function() {
-  $('.question').click(function() {
-      $(this).toggleClass('open').next('.answer').slideToggle();
+/* FAQ's page */
+$(document).ready(function () {
+  $(".question").click(function () {
+    $(this).toggleClass("open").next(".answer").slideToggle();
   });
 
 });

@@ -437,6 +437,10 @@ body {
   pointer-events: all;
 }
 
+#active {
+  color: var(--kappel);
+}
+
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
@@ -901,7 +905,6 @@ body {
   --ionicon-stroke-width: 40px;
 }
 
-
 /*-----------------------------------*\
   #CONTACT US
 \*-----------------------------------*/
@@ -999,7 +1002,7 @@ form {
 }
 
 .dropdown-menu {
-  cursor:pointer;
+  cursor: pointer;
   background-color: #1abc9c;
 }
 
@@ -1197,6 +1200,7 @@ textarea.input-fields {
 }
 
 .faq-container {
+  margin-top: 20px;
   position: relative;
   min-height: 100vh;
   padding: 20px;
@@ -1234,11 +1238,11 @@ textarea.input-fields {
 }
 
 .toggle-btn::before {
-  content: '+ ';
+  content: "+ ";
 }
 
 .toggle-btn.open::before {
-  content: '- ';
+  content: "- ";
 }
 
 .faq-square {
@@ -2200,7 +2204,6 @@ p {
   }
 }
 
-
 @media (max-width: 850px) {
   .form {
     grid-template-columns: 1fr;
@@ -2239,7 +2242,6 @@ p {
 }
 
 @media (max-width: 480px) {
-
   .contact-info:before {
     display: none;
   }
