@@ -112,3 +112,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+
+/* Contact Form */
+const inputs = document.querySelectorAll(".input-fields");
+
+function focusFunc() {
+  let parent = this.parentNode;
+  parent.classList.add("focus");
+}
+
+function blurFunc() {
+  let parent = this.parentNode;
+  if (this.value == "") {
+    parent.classList.remove("focus");
+  }
+}
+
+inputs.forEach((input) => {
+  input.addEventListener("focus", focusFunc);
+  input.addEventListener("blur", blurFunc);
+});
+
+$(document).ready(function() {
+  $('.question').click(function() {
+      $(this).toggleClass('open').next('.answer').slideToggle();
+  });
+
+});
