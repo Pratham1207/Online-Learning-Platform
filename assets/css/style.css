@@ -1280,7 +1280,6 @@ textarea.input-fields {
   opacity: 0.7;
 }
 
-
 /* COURSE HEADER */
 .course-header {
   font-size: larger;
@@ -1424,8 +1423,29 @@ textarea.input-fields {
   flex: 1;
 }
 
-.admission-requirements {
-  margin: 20px auto;
+.admission-requirements,
+.course-requirements {
+    margin-top: 20px;
+}
+
+.admission-requirements ul,
+.course-requirements ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+.admission-requirements ul li,
+.course-requirements ul li {
+    margin-bottom: 8px;
+}
+
+/* Additional styling for headers */
+.admission-requirements h3,
+.course-requirements h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 .contact-cards {
