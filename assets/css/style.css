@@ -1426,8 +1426,29 @@ textarea.input-fields {
   flex: 1;
 }
 
-.admission-requirements {
-  margin: 20px auto;
+.admission-requirements,
+.course-requirements {
+    margin-top: 20px;
+}
+
+.admission-requirements ul,
+.course-requirements ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+.admission-requirements ul li,
+.course-requirements ul li {
+    margin-bottom: 8px;
+}
+
+/* Additional styling for headers */
+.admission-requirements h3,
+.course-requirements h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 .contact-cards {
@@ -2284,4 +2305,104 @@ p {
   .contact-submit {
     padding: 0.45rem 1.2rem;
   }
+}
+
+#progress-bar-course-1 {
+  height: 25px;
+  width: 250px;
+  float: left;
+  margin-left: .8em;
+  border-radius: 0.3em;
+  border: 0.15em solid #D3D3D3;
+}
+#progress-bar-course-1 .ui-progressbar-value {
+    height: 100%;
+    background: #5cb85c;
+}
+#progress-bar-course-2 {
+  height: 25px;
+  width: 250px;
+  float: left;
+  margin-left: .8em;
+  border-radius: 0.3em;
+  border: 0.15em solid #D3D3D3;
+}
+#progress-bar-course-2 .ui-progressbar-value {
+    height: 100%;
+    background: #5cb85c;
+}
+
+.m-10{
+margin-top: 50px;
+}
+
+.course-search {
+background-color: #f7f7f7;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+max-width: 100%;
+margin: 0 auto;
+margin-top: 50px;
+}
+
+.section-title {
+margin-bottom: 15px;
+}
+
+#search-bar {
+width: calc(100%);
+padding: 8px 30px 8px 10px;
+margin-bottom: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+.search-container {
+position: relative;
+}
+
+.search-icon {
+position: absolute;
+top: 50%;
+right: 10px;
+transform: translateY(-50%);
+color: #888;
+}
+
+label {
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+select {
+width: 100%;
+padding: 8px;
+margin-bottom: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+#toggle-advanced-search {
+background-color: #007bff;
+color: #fff;
+border: none;
+padding: 8px 15px;
+border-radius: 4px;
+cursor: pointer;
+margin-bottom: 10px;
+}
+
+#advanced-search {
+margin-top: 20px;
+border-width: thin;
+padding: 10px;
+}
+
+#advanced-search input[type="text"],
+#advanced-search select {
+width: calc(100% - 20px);
+padding: 8px;
+margin-bottom: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
 }
