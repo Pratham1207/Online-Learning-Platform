@@ -8,13 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
       event.preventDefault(); // Prevent form submission
 
       // Get values from input fields
-      const username = document.getElementById("regUsername").value;
+      const username = document.getElementById("regEmail").value;
       const password = document.getElementById("regPassword").value;
       const confirmPassword = document.getElementById("confirmPassword").value;
 
       // Validate username
       if (username.trim() === "") {
-        showMessage("Please enter a username.", "error");
+        showMessage("Please enter a email.", "error");
         return;
       }
 
@@ -65,12 +65,12 @@ document.addEventListener("DOMContentLoaded", function () {
       event.preventDefault(); // Prevent form submission
 
       // Get values from input fields
-      const username = document.getElementById("loginUsername").value;
+      const username = document.getElementById("loginEmail").value;
       const password = document.getElementById("loginPassword").value;
 
       // Validate username
       if (username.trim() === "") {
-        showMessage("Please enter a username.", "error");
+        showMessage("Please enter a email.", "error");
         return;
       }
 
