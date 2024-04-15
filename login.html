@@ -32,7 +32,72 @@
         </form>
     </div>
     <div id="messageContainer"></div>
-    <script src="assets/js/login.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loginForm = document.getElementById("loginForm");
+            const messageContainer = document.getElementById("messageContainer");
+
+            if (loginForm) {
+                loginForm.addEventListener("submit", function (event) {
+                    event.preventDefault(); // Prevent form submission
+
+                    // Get values from input fields
+                    const username = document.getElementById("loginEmail").value;
+                    const password = document.getElementById("loginPassword").value;
+
+                    // Validate username
+                    if (username.trim() === "") {
+                        showMessage("Please enter an email.", "error");
+                        return;
+                    }
+
+                    // Validate password
+                    if (password.trim() === "") {
+                        showMessage("Please enter a password.", "error");
+                        return;
+                    }
+
+                    // Check authentication
+                    if (checkAuthentication(username, password)) {
+                        showMessage("Login successful!", "success");
+                        // Redirect to index.html after successful login
+                        setTimeout(() => {
+                            window.location.href = "index.html"; // Replace with your desired destination
+                        }, 2000);
+                    } else {
+                        showMessage("Invalid username or password", "error");
+                    }
+                });
+            } else {
+                console.error("Login form not found.");
+            }
+
+            // Function to check authentication
+            const checkAuthentication = (username, password) => {
+                // Retrieve stored username and password from session storage
+                const storedUsername = sessionStorage.getItem("username");
+                const storedPassword = sessionStorage.getItem("password");
+
+                // Compare entered username and password with stored values
+                return username === storedUsername && password === storedPassword;
+            };
+
+            // Function to display messages on the webpage
+            const showMessage = (message, type) => {
+                const messageDiv = document.createElement("div");
+                messageDiv.textContent = message;
+                messageDiv.classList.add("message", type);
+                messageContainer.appendChild(messageDiv);
+
+                // Automatically remove the message after 5 seconds
+                setTimeout(() => {
+                    messageDiv.remove();
+                }, 5000);
+            };
+        });
+
+    </script>
+
 </body>
 
 </html>
