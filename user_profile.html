@@ -310,7 +310,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Retrieve username from session storage
-            const loggedInUsername = true;// sessionStorage.getItem("username");
+            const loggedInUsername = sessionStorage.getItem("username");
 
             // Display username on the page
             if (!loggedInUsername) {
