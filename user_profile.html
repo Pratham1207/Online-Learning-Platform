@@ -25,12 +25,10 @@
 </head>
 
 <body id="top">
-      <!-- header section -->
-      <header class="header" data-header>
+    <!-- header section -->
+    <header class="header" data-header>
         <div class="container">
-            <a href="#" class="logo">
-                <h1>LearnHub</h1>
-            </a>
+
             <nav class="navbar" data-navbar>
                 <div class="wrapper"></div>
 
@@ -90,55 +88,60 @@
     </header>
     <br><br>
     <main>
-      <div class="profile-container">
-      <img src="assets/images/shape.png" class="profile-square" alt="" />
-                <h1 class="profile-heading">User Profile</h1>
-              
-  <div id="tabs">
-    <ul>
-      <li><a href="#tabs-1">Overview</a></li>
-      <li><a href="#tabs-2">Interests</a></li>
-      <li><a href="#tabs-3">Learning Goals</a></li>
-    </ul>
-    <div id="tabs-1">
-        <div class="profile">
-            <img src="assets/images/profile.png" alt="Profile Picture">
-            <h2>John Doe</h2>
-            <p>Email: john.doe@Learnhub.com</p>
-            <p>Address: New York, USA</p>
-            <p>Age: 20 years</p>
-            <p>Degree Program: Bachelor of Science in Biology</p>
-        </div>
-    </div>
-    <div id="tabs-2">
-      <p class="information">Passionate Pursuit: Deeply interested in the study of living organisms and their interconnectedness within the natural world. </p>
+        <div class="profile-container">
+            <img src="assets/images/shape.png" class="profile-square" alt="" />
+            <h1 class="profile-heading">User Profile</h1>
 
-      <p class="information"> Focus Area: Particularly intrigued by molecular biology and genetics. </p>
-        
-      <p class="information"> Areas of Interest: DNA replication, gene expression, genetic inheritance.</p>
-        
-      <p class="information"> Active Involvement: Actively engaged in research projects and interdisciplinary research initiatives.</p>
-        
-      <p class="information"> Research Interests: Bioinformatics, biotechnology, molecular ecology.</p>
-        
-      <p class="information"> Advocacy: Passionate about environmental conservation and sustainability.</p>
-        
-      <p class="information"> Involvement: Participates in campus organizations and volunteer efforts promoting eco-consciousness. </p>
-        
-   </div>
-    <div id="tabs-3">
-      <ul >
-        <li class="information"> Deepen Understanding of Molecular Biology and Genetics</li>
-        <li class="information"> Enhance Research Skills</li>
-        <li class="information"> Expand Knowledge in Interdisciplinary Fields</li>
-        <li class="information"> Integrate Ecological Principles into Studies</li>
-        <li class="information"> Improve Science Communication Skills</li>
-        <li class="information"> Prepare for Graduate Studies</li>
-        <li class="information"> Cultivate Leadership and Collaboration Skills</li>
-      </ul>
-    </div>
-  </div> 
-</div>
+            <div id="tabs">
+                <ul>
+                    <li><a href="#tabs-1">Overview</a></li>
+                    <li><a href="#tabs-2">Interests</a></li>
+                    <li><a href="#tabs-3">Learning Goals</a></li>
+                </ul>
+                <div id="tabs-1">
+                    <div class="profile">
+                        <img src="assets/images/profile.png" alt="Profile Picture">
+                        <h2>John Doe</h2>
+                        <p>Email: john.doe@Learnhub.com</p>
+                        <p>Address: New York, USA</p>
+                        <p>Age: 20 years</p>
+                        <p>Degree Program: Bachelor of Science in Biology</p>
+                    </div>
+                </div>
+                <div id="tabs-2">
+                    <p class="information">Passionate Pursuit: Deeply interested in the study of living organisms and
+                        their interconnectedness within the natural world. </p>
+
+                    <p class="information"> Focus Area: Particularly intrigued by molecular biology and genetics. </p>
+
+                    <p class="information"> Areas of Interest: DNA replication, gene expression, genetic inheritance.
+                    </p>
+
+                    <p class="information"> Active Involvement: Actively engaged in research projects and
+                        interdisciplinary research initiatives.</p>
+
+                    <p class="information"> Research Interests: Bioinformatics, biotechnology, molecular ecology.</p>
+
+                    <p class="information"> Advocacy: Passionate about environmental conservation and sustainability.
+                    </p>
+
+                    <p class="information"> Involvement: Participates in campus organizations and volunteer efforts
+                        promoting eco-consciousness. </p>
+
+                </div>
+                <div id="tabs-3">
+                    <ul>
+                        <li class="information"> Deepen Understanding of Molecular Biology and Genetics</li>
+                        <li class="information"> Enhance Research Skills</li>
+                        <li class="information"> Expand Knowledge in Interdisciplinary Fields</li>
+                        <li class="information"> Integrate Ecological Principles into Studies</li>
+                        <li class="information"> Improve Science Communication Skills</li>
+                        <li class="information"> Prepare for Graduate Studies</li>
+                        <li class="information"> Cultivate Leadership and Collaboration Skills</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- footer -->
@@ -302,8 +305,8 @@
     <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
         <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
     </a>
-   
-   
+
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Retrieve username from session storage
@@ -332,10 +335,10 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <!--<script src="./assets/js/script.js" defer></script>-->
     <script>
-      $( function() {
-        $( "#tabs" ).tabs({ active: 0 });
-      } );
-      </script>
+        $(function () {
+            $("#tabs").tabs({ active: 0 });
+        });
+    </script>
 </body>
 
 </html>
