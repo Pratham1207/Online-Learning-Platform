@@ -99,18 +99,26 @@ body {
   text-decoration: underline;
 }
 
-.message {
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+#messageContainer {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
 }
 
-.success {
-  background-color: #8fbc8f;
-  color: #fff;
+.message {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 .error {
-  background-color: #cd5c5c;
-  color: #fff;
+  background-color: #ffcccc;
+  color: #ff0000;
+}
+
+.success {
+  background-color: #ccffcc;
+  color: #008000;
 }
