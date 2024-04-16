@@ -138,24 +138,24 @@
                     <form action="index.html" autocomplete="off">
                         <h3 class="title">Contact us</h3>
                         <div class="input-container">
-                            <input type="text" name="name" class="input-fields" required>
+                            <input type="text" name="name" class="input-fields">
                             <label for="name">Name</label>
                             <span class="labels">Name</span>
                         </div>
                         <div class="input-container">
-                            <input type="email" name="email" class="input-fields" required>
+                            <input type="email" name="email" class="input-fields">
                             <label for="email">Email</label>
                             <span class="labels">Email</span>
                         </div>
                         <div class="input-container">
-                            <input type="tel" name="phone" class="input-fields" required>
+                            <input type="tel" name="phone" class="input-fields">
                             <label for="phone">Phone</label>
                             <span class="labels">Phone</span>
                         </div>
                         <div class="input-container dropdown">
                             <label for="course">Course</label>
                             <span class="labels">Course</span>
-                            <select name="course" class="input-fields dropdown-menu" required>
+                            <select name="course" class="input-fields dropdown-menu">
                                 <option value="" disabled selected></option>
                                 <option value="web_design">Web Design</option>
                                 <option value="graphic_design">Graphic Design</option>
@@ -164,7 +164,7 @@
                             </select>
                         </div>
                         <div class="input-container textarea">
-                            <textarea name="message" class="input-fields" required></textarea>
+                            <textarea name="message" class="input-fields"></textarea>
                             <label for="message">Message</label>
                             <span class="labels">Message</span>
                         </div>
@@ -356,6 +356,46 @@
                 window.location.href = "login.html";
             });
         });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.querySelector("form");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent the form from submitting
+
+                // Validate each input field
+                const name = form.querySelector('input[name="name"]').value.trim();
+                const email = form.querySelector('input[name="email"]').value.trim();
+                const phone = form.querySelector('input[name="phone"]').value.trim();
+                const course = form.querySelector('select[name="course"]').value.trim();
+                const message = form.querySelector('textarea[name="message"]').value.trim();
+
+                // Check if any field is empty
+                if (name === "" || email === "" || phone === "" || course === "" || message === "") {
+                    alert("Please fill out all fields.");
+                    return;
+                }
+
+                // Validate email format
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert("Please enter a valid email address.");
+                    return;
+                }
+
+                // Validate phone format
+                const phoneRegex = /^\d{10}$/; // Assuming 10-digit phone number format
+                if (!phoneRegex.test(phone)) {
+                    alert("Please enter a valid phone number.");
+                    return;
+                }
+
+                // If all validations pass, submit the form
+                alert("Form submitted successfully!");
+                form.submit();
+            });
+        });
+
     </script>
 
     <!-- library js -->
